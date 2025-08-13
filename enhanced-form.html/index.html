@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Enhanced HTML5 Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        header, footer {
+            background: #f5f5f5;
+            padding: 10px;
+            text-align: center;
+        }
+        main {
+            max-width: 800px;
+            margin: auto;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 10px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+        }
+        th {
+            background: #eee;
+        }
+        form {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        fieldset {
+            margin-bottom: 20px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        .form-actions {
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Enhanced HTML5 Content & Form</h1>
+</header>
+
+<main>
+    <!-- Lists Section -->
+    <section>
+        <h2>Popular Web Technologies</h2>
+        <ul>
+            <li>HTML5 - Semantic markup language</li>
+            <li>CSS3 - Styling and layout</li>
+            <li>JavaScript (ES6+) - Interactive functionality</li>
+            <li>Python - Backend development</li>
+        </ul>
+        
+        <h3>Learning Path (Ordered)</h3>
+        <ol>
+            <li>HTML Fundamentals</li>
+            <li>CSS Styling</li>
+            <li>JavaScript Basics</li>
+            <li>Advanced Frameworks</li>
+        </ol>
+        
+        <h3>Key Concepts</h3>
+        <dl>
+            <dt>Semantic HTML</dt>
+            <dd>Using meaningful HTML elements that describe content structure</dd>
+            <dt>Responsive Design</dt>
+            <dd>Creating layouts that adapt to different screen sizes</dd>
+            <dt>Accessibility</dt>
+            <dd>Making web content usable by people with disabilities</dd>
+        </dl>
+    </section>
+
+    <!-- Table Section -->
+    <section>
+        <h2>Top Programming Languages (2025)</h2>
+        <table>
+            <caption>Popularity Ranking</caption>
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Language</th>
+                    <th>Usage (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>JavaScript</td>
+                    <td>65%</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Python</td>
+                    <td>60%</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Java</td>
+                    <td>50%</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Media Section -->
+    <section>
+        <h2>HTML5 Media Examples</h2>
+        
+        <h3>Sample Image</h3>
+        <figure>
+            <img src="https://via.placeholder.com/400x200/4CAF50/white?text=HTML5+Demo" 
+                 alt="HTML5 demonstration placeholder image" 
+                 width="400" height="200">
+            <figcaption>HTML5 semantic elements demonstration</figcaption>
+        </figure>
+        
+        <h3>Audio Example</h3>
+        <audio controls>
+            <source src="sample.mp3" type="audio/mpeg">
+            <source src="sample.ogg" type="audio/ogg">
+            Your browser does not support HTML5 audio.
+        </audio>
+        
+        <h3>Video Example</h3>
+        <video controls width="100%" poster="https://via.placeholder.com/400x225/2196F3/white?text=Video+Poster">
+            <source src="sample.mp4" type="video/mp4">
+            <source src="sample.webm" type="video/webm">
+            Your browser does not support HTML5 video.
+        </video>
+    </section>
+
+    <!-- Form Section -->
+    <section>
+        <h2>Registration Form</h2>
+        <form action="#" method="post" autocomplete="on">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required minlength="3">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="+123456789" 
+                       pattern="\\+?[0-9]{7,15}" title="Enter a valid phone number (7-15 digits, optional + prefix)" required>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Account Details</legend>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Choose a username" 
+                       required minlength="3" maxlength="15" pattern="[a-zA-Z0-9_]+" 
+                       title="Username must be 3-15 characters, letters, numbers, and underscores only">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" 
+                       required minlength="6" maxlength="20" 
+                       pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d@$!%*?&]{6,}" 
+                       title="Password must be 6-20 characters with at least one uppercase, lowercase, and number">
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="13" max="120" required>
+
+                <label for="website">Personal Website (optional):</label>
+                <input type="url" id="website" name="website" placeholder="https://example.com">
+
+                <label for="country">Country:</label>
+                <select id="country" name="country" required>
+                    <option value="">Select your country</option>
+                    <option value="ss">South Sudan</option>
+                    <option value="rw">Rwanda</option>
+                    <option value="ke">Kenya</option>
+                    <option value="ug">Uganda</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferences</legend>
+                <label>
+                    <input type="checkbox" name="subscribe" value="yes">
+                    Subscribe to newsletter
+                </label>
+
+                <label>Gender:</label>
+                <label><input type="radio" name="gender" value="male" required> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+                <label><input type="radio" name="gender" value="other"> Other</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Information</legend>
+                <label for="experience">Years of Experience:</label>
+                <input type="range" id="experience" name="experience" min="0" max="20" value="0" 
+                       oninput="this.nextElementSibling.value = this.value">
+                <output>0</output> years
+
+                <label for="skills">Skills (select multiple):</label>
+                <select id="skills" name="skills" multiple size="4">
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="js">JavaScript</option>
+                    <option value="python">Python</option>
+                    <option value="react">React</option>
+                    <option value="nodejs">Node.js</option>
+                </select>
+
+                <label for="portfolio">Upload Portfolio (PDF only):</label>
+                <input type="file" id="portfolio" name="portfolio" accept=".pdf" readonly>
+
+                <label for="notes">Additional Notes:</label>
+                <textarea id="notes" name="notes" rows="4" maxlength="500" 
+                         placeholder="Enter any extra information (max 500 characters)"></textarea>
+            </fieldset>
+
+            <div class="form-actions">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Clear">
+            </div>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Enhanced HTML5 Form Demo</p>
+</footer>
+</body>
+</html>
+
