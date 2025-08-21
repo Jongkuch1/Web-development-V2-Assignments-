@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Interactive Web Experience</h1>
+            <button id="themeToggle" class="theme-btn">🌙 Dark Mode</button>
+        </header>
+
+        <!-- Part 1: Event Handling -->
+        <section class="section">
+            <h2>Part 1: Event Handling</h2>
+            <div class="event-demo">
+                <button id="clickBtn">Click Me!</button>
+                <div id="hoverBox" class="hover-box">Hover Over Me</div>
+                <input type="text" id="keyInput" placeholder="Type something...">
+                <p id="eventOutput">Events will appear here...</p>
+            </div>
+        </section>
+
+        <!-- Part 2: Interactive Elements -->
+        <section class="section">
+            <h2>Part 2: Interactive Features</h2>
+            
+            <!-- Counter Game -->
+            <div class="interactive-element">
+                <h3>Counter Game</h3>
+                <div class="counter">
+                    <button id="decreaseBtn">-</button>
+                    <span id="counterValue">0</span>
+                    <button id="increaseBtn">+</button>
+                    <button id="resetBtn">Reset</button>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="interactive-element">
+                <h3>FAQ Section</h3>
+                <div class="faq">
+                    <div class="faq-item">
+                        <button class="faq-question">What is JavaScript? <span class="arrow">▼</span></button>
+                        <div class="faq-answer">JavaScript is a programming language that makes web pages interactive.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">How do events work? <span class="arrow">▼</span></button>
+                        <div class="faq-answer">Events are actions that happen in the browser, like clicks or key presses.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Interface -->
+            <div class="interactive-element">
+                <h3>Tabbed Content</h3>
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="tab1">HTML</button>
+                    <button class="tab-btn" data-tab="tab2">CSS</button>
+                    <button class="tab-btn" data-tab="tab3">JavaScript</button>
+                </div>
+                <div class="tab-content">
+                    <div id="tab1" class="tab-panel active">
+                        <p>HTML structures web content with elements and tags.</p>
+                    </div>
+                    <div id="tab2" class="tab-panel">
+                        <p>CSS styles and layouts web pages with colors, fonts, and positioning.</p>
+                    </div>
+                    <div id="tab3" class="tab-panel">
+                        <p>JavaScript adds interactivity and dynamic behavior to web pages.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 3: Form Validation -->
+        <section class="section">
+            <h2>Part 3: Form Validation</h2>
+            <form id="userForm" class="form">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="error" id="nameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <span class="error" id="passwordError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <span class="error" id="phoneError"></span>
+                </div>
+
+                <button type="submit" id="submitBtn">Submit Form</button>
+                <div id="formSuccess" class="success"></div>
+            </form>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
